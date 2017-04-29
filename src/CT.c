@@ -115,6 +115,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         * right_wt * (tr_var / right_tr  + con_var / (right_wt - right_tr));
     
     if (nclass == 0) {
+        printf("Continous"); 
         /* continuous predictor */
         left_wt = 0;
         left_tr = 0;
@@ -196,6 +197,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
     * Categorical predictor
     */
     else {
+        printf(Categorical);
         for (i = 0; i < nclass; i++) {
             countn[i] = 0;
             wts[i] = 0;
