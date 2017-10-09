@@ -27,7 +27,7 @@ CTH_rundown(pNode tree, int obs, double *cp, double *xpred, double *xtemp, int k
     double tr_sqr_sum, con_sqr_sum;
     double consums, trsums, cons, trs;
     double tr_var, con_var;
-
+    Rprintf("Entered CTH_rundown.");
     /*
      * Now, repeat the following: for the cp of interest, run down the tree
      *   until I find a node with smaller complexity.  The parent node will
