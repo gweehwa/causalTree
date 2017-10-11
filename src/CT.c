@@ -46,7 +46,7 @@ CTss(int n, double *y[], double *value,  double *con_mean, double *tr_mean,
     double effect;
     double tr_var, con_var;
     double con_sqr_sum = 0., tr_sqr_sum = 0.;
-    Rprintf("y, x and treatment are %d., %d.", *y[1], treatment[1]);
+    rprintf('$a, $b:.1f, $c:+.2f, $b, $a:.0f',a=1.56,b=2.34,c=3.78);
     for (i = 0; i < n; i++) {
         temp1 += *y[i] * wt[i] * treatment[i];
         temp0 += *y[i] * wt[i] * (1 - treatment[i]);
@@ -113,7 +113,7 @@ void CT(int n, double *y[], double *x, int nclass, int edge, double *improve, do
         / ((right_wt - right_tr) * (right_wt - right_tr));
     node_effect = alpha * temp * temp * right_wt - (1 - alpha) * (1 + train_to_est_ratio) 
         * right_wt * (tr_var / right_tr  + con_var / (right_wt - right_tr));
-    
+    Rprintf("temp and node_effect are %d., %d.", *y[1], treatment[1]);
     if (nclass == 0) {
         /* continuous predictor */
         left_wt = 0;
